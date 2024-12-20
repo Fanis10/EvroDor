@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>Главная</title>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
 </head>
 
 
@@ -100,7 +101,7 @@
 								</div>
 								<div class="rental-card__desc">
 									<a href="" class="rental-card__text">Арендовать тротуарный Асфальтоукладчик Hanta до 3-х метров шириной</a>
-									<button class="rental-card__btn btn btn-yellow">
+									<button class="rental-card__btn btn btn-yellow" data-modal="contactModal">
 										<span>Подать заявку</span>
 									</button>
 								</div>
@@ -114,7 +115,7 @@
 								</div>
 								<div class="rental-card__desc">
 									<a href="" class="rental-card__text">Арендовать комбинированный асфальтовый каток Dynapac CC1300С масса 4т</a>
-									<button class="rental-card__btn btn btn-yellow">
+									<button class="rental-card__btn btn btn-yellow" data-modal="contactModal">
 										<span>Подать заявку</span>
 									</button>
 								</div>
@@ -128,7 +129,7 @@
 								</div>
 								<div class="rental-card__desc">
 									<a href="" class="rental-card__text">Арендовать Асфальтоукладчик Vogele Super 1300-3</a>
-									<button class="rental-card__btn btn btn-yellow">
+									<button class="rental-card__btn btn btn-yellow" data-modal="contactModal">
 										<span>Подать заявку</span>
 									</button>
 								</div>
@@ -142,7 +143,7 @@
 								</div>
 								<div class="rental-card__desc">
 									<a href="" class="rental-card__text">Арендовать двухвальцовый асфальтовый каток HAMM HD90 масса 9 т</a>
-									<button class="rental-card__btn btn btn-yellow">
+									<button class="rental-card__btn btn btn-yellow" data-modal="contactModal">
 										<span>Подать заявку</span>
 									</button>
 								</div>
@@ -156,7 +157,7 @@
 								</div>
 								<div class="rental-card__desc">
 									<a href="" class="rental-card__text">Арендовать Экскаватор-погрузчик JCB4</a>
-									<button class="rental-card__btn btn btn-yellow">
+									<button class="rental-card__btn btn btn-yellow" data-modal="contactModal">
 										<span>Подать заявку</span>
 									</button>
 								</div>
@@ -170,7 +171,7 @@
 								</div>
 								<div class="rental-card__desc">
 									<a href="" class="rental-card__text">Арендовать Минипогрузчик Bobcat</a>
-									<button class="rental-card__btn btn btn-yellow">
+									<button class="rental-card__btn btn btn-yellow" data-modal="contactModal">
 										<span>Подать заявку</span>
 									</button>
 								</div>
@@ -184,7 +185,7 @@
 								</div>
 								<div class="rental-card__desc">
 									<a href="" class="rental-card__text">Арендовать Камаз самосвал</a>
-									<button class="rental-card__btn btn btn-yellow">
+									<button class="rental-card__btn btn btn-yellow" data-modal="contactModal">
 										<span>Подать заявку</span>
 									</button>
 								</div>
@@ -198,7 +199,7 @@
 								</div>
 								<div class="rental-card__desc">
 									<a href="" class="rental-card__text">Арендовать эвакуатор, длина 8м, грузоподъемный 7 тонн</a>
-									<button class="rental-card__btn btn btn-yellow">
+									<button class="rental-card__btn btn btn-yellow" data-modal="contactModal">
 										<span>Подать заявку</span>
 									</button>
 								</div>
@@ -295,19 +296,19 @@
 						</div>
 						<div class="advantages__items2">
 							<div class="advantages__item2">
-								<div class="advantages__item2-title">22</div>
+								<div class="advantages__item2-title counter-value" data-count="22">0</div>
 								<div class="advantages__item2-text">Опыт работы, лет</div>
 							</div>
 							<div class="advantages__item2">
-								<div class="advantages__item2-title">150 +</div>
+								<div class="advantages__item2-title plus counter-value" data-count="150">0</div>
 								<div class="advantages__item2-text">Выполненных работ</div>
 							</div>
 							<div class="advantages__item2">
-								<div class="advantages__item2-title">45</div>
+								<div class="advantages__item2-title counter-value" data-count="45">0</div>
 								<div class="advantages__item2-text">Партнёров</div>
 							</div>
 							<div class="advantages__item2">
-								<div class="advantages__item2-title">30</div>
+								<div class="advantages__item2-title counter-value" data-count="30">0</div>
 								<div class="advantages__item2-text">Аренда техники, единиц</div>
 							</div>
 						</div>
@@ -430,9 +431,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="map">
-							<iframe src="https://yandex.ru/map-widget/v1/?ll=30.464859%2C59.961683&mode=search&oid=1457291247&ol=biz&sctx=ZAAAAAgBEAAaKAoSCRTrVPmejUhAEdcyGY7n5UtAEhIJGjOJesGn0D8RukkMAiuHtj8iBgABAgMEBSgKOABAvZ4BSAFqAnJ1nQHNzMw9oAEAqAEAvQFQih%2BOwgEF7%2F%2FxtgWCAmnQoNC%2B0YHRgdC40Y8sINCh0LDQvdC60YIt0J%2FQtdGC0LXRgNCx0YPRgNCzLCDRiC4g0KDQtdCy0L7Qu9GO0YbQuNC4LCA2OSwg0JHQpiDigJxSZUZvcm1h4oCdLCDQvtGE0LjRgSA0MDmKAgCSAgEymgIMZGVza3RvcC1tYXBzqgInNjAwMzE0Myw4NTc0NDc2OTI0LDYwMDM0NjksMTg2NDc4MTM5MzIwsAIB&sll=30.464859%2C59.961683&sspn=0.018426%2C0.005546&text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%88.%20%D0%A0%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D0%B8%2C%2069%2C%20%D0%91%D0%A6%20%E2%80%9CReForma%E2%80%9D%2C%20%D0%BE%D1%84%D0%B8%D1%81%20409&z=15.82" frameborder="1" allowfullscreen="true"></iframe>
-						</div>
+						<div id="map" class="map"></div>
 					</div>
 					<div class="contacts__bottom">
 						<div class="container">
@@ -543,6 +542,26 @@
 	<script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 
+	<script type="text/javascript">
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [59.962071, 30.45842],
+            zoom: 15
+        });
+
+        var myPlacemark = new ymaps.Placemark([59.962071, 30.464342], null, {
+            iconLayout: 'default#image',
+            // iconImageHref: "img/map-icon.svg",
+            iconImageSize: [45, 60],
+            // iconImageOffset: [-15, -44]
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
+
+    }
+</script>
 </body>
 
 </html>
